@@ -36,3 +36,6 @@ allow hal_fingerprint_default vendor_sysfs_fps_attr:file rw_file_perms;
 allow hal_fingerprint_default vendor_sysfs_spss:dir { search };
 allow hal_fingerprint_default vendor_sysfs_spss:file { open read };
 allow hal_fingerprint_default sysfs:file { write };
+
+# Allow fp HAL to send hint
+hal_client_domain(hal_fingerprint_default, hal_power)
