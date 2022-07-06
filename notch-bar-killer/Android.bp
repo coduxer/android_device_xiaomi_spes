@@ -1,0 +1,12 @@
+android_app_import {
+	name: "notch-bar-killer",
+	owner: "pixelexperience",
+	apk: "notch-bar-killer.apk",
+	presigned: true,
+	dex_preopt: {
+		enabled: false,
+	},
+	privileged: true,
+	product_specific: true,
+	overrides: ["nothing"],
+}
