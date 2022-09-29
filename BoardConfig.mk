@@ -147,7 +147,6 @@ BOARD_KERNEL_CMDLINE += \
     androidboot.hardware=qcom \
     androidboot.memcg=1 \
     androidboot.usbcontroller=4e00000.dwc3 \
-    androidboot.selinux=permissive \
     console=ttyMSM0,115200n8 \
     earlycon=msm_geni_serial,0x4a90000 \
     loop.max_part=7 \
@@ -259,8 +258,6 @@ endif
 SYSTEM_EXT_PUBLIC_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/public
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 BUILD_BROKEN_VENDOR_PROPERTY_NAMESPACE := true
-
-IGNORE_SELINUX_NEVERALLOWS := true
 
 # WiFi
 BOARD_WLAN_DEVICE := qcwcn
