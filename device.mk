@@ -106,7 +106,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
-    audio.primary.bengal \
     audio.usb.default
 
 PRODUCT_PACKAGES += \
@@ -197,7 +196,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libdisplayconfig.qti \
-    libdisplayconfig.qti.vendor \
     libdisplayconfig.system.qti \
     libqdMetaData \
     libqdMetaData.system \
@@ -222,7 +220,6 @@ PRODUCT_PACKAGES += \
 
 # Fastbootd
 PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.1-impl-custom \
     fastbootd
 
 # GNSS
@@ -310,7 +307,6 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_PACKAGES += \
-    android.hardware.media.omx@1.0-impl \
     android.hardware.media.omx@1.0-service
 
 PRODUCT_PACKAGES += \
@@ -330,8 +326,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libstagefrighthw \
-    libstagefrighthw_omx \
-    libstagefrighthw_foundation \
     libstagefright_omx.vendor
 
 PRODUCT_COPY_FILES += \
