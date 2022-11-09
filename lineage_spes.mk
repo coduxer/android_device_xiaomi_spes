@@ -15,8 +15,13 @@ $(call inherit-product, device/xiaomi/spes/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Additions
-$(call inherit-product-if-exists, vendor/gapps/config.mk)
 $(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
+
+#Gapps
+$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+
+#MicroG
+$(call inherit-product-if-exists, vendor/partner_gms/products/gms.mk)
 
 # Camera
 $(call inherit-product-if-exists, vendor/miuicamera/config.mk)
