@@ -45,8 +45,3 @@ PRODUCT_PACKAGES += \
 # F-Droid Privileged Extension
 PRODUCT_PACKAGES += \
     F-DroidPrivilegedExtension
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="spes-user 11 RKQ1.211001.001 V13.0.9.0.RGCMIXM release-keys"
-
-BUILD_FINGERPRINT := Redmi/spes/spes:11/RKQ1.211001.001/V13.0.9.0.RGCMIXM:user/release-keys
