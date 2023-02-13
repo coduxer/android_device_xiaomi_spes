@@ -835,7 +835,7 @@ system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
 # IMS
 -system_ext/app/uceShimService/uceShimService.apk
--system_ext/priv-app/ims/ims.apk
+-system_ext/priv-app/ims/ims.apk|6c568d92037d7097772c87f245b669bd74b91757
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.0-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.1-java.xml
 system_ext/etc/permissions/com.qualcomm.qti.imscmservice-V2.2-java.xml
