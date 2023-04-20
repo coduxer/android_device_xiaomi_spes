@@ -17,11 +17,28 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Additions
 $(call inherit-product-if-exists, vendor/prebuilt-apps/config.mk)
 
-#Gapps
-$(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
+#Default when no special release_type is set
+ifneq ($(filter-out _VANILLA _GAPPS _MICROG,_$(RELEASE_TYPE)),)
+    #Gapps
+    $(call inherit-product-if-exists, vendor/gapps/arm64/arm64-vendor.mk)
 
-#MicroG
-$(call inherit-product-if-exists, vendor/partner_gms/products/gms.mk)
+    #MicroG
+    $(call inherit-product-if-exists, vendor/partner_gms/products/gms.mk)
+endif
+#Special case when release_type set to GAPPS
+ifeq ($(RELEASE_TYPE), GAPPS)
+    #Gapps
+    $(call inherit-product, vendor/gapps/arm64/arm64-vendor.mk)
+endif
+#Special case when release type set to MICROG
+ifeq ($(RELEASE_TYPE), MICROG)
+    #Microg
+    $(call inherit-product, vendor/partner_gms/products/gms.mk)
+endif
+#Special case when release type set to VANILLA
+ifeq ($(RELEASE_TYPE), VANILLA)
+    # Do nothing
+endif
 
 # Camera
 $(call inherit-product-if-exists, vendor/miuicamera/config.mk)
