@@ -178,6 +178,28 @@ on post-fs-data
     mkdir /data/vendor/bluetooth 0770 bluetooth bluetooth
     mkdir /data/vendor/ramdump/bluetooth 0770 bluetooth bluetooth
 
+    #Create the directories used by the subsystem_ramdump
+    mkdir /data/vendor/bsplog 0771 root system
+    mkdir /data/vendor/bsplog/modem 0771 root system
+    mkdir /data/vendor/bsplog/modem/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/camera 0771 root system
+    mkdir /data/vendor/bsplog/camera/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/audio 0771 root system
+    mkdir /data/vendor/bsplog/audio/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/sensor 0771 root system
+    mkdir /data/vendor/bsplog/sensor/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/secure 0771 root system
+    mkdir /data/vendor/bsplog/secure/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/wlan 0771 root system
+    mkdir /data/vendor/bsplog/wlan/ssr_dump 0771 root system
+    mkdir /data/vendor/bsplog/other 0771 root system
+    mkdir /data/vendor/bsplog/other/ssr_dump 0771 root system
+
+    #enabled modem/adsp/cdsp coredump
+    write sys/class/remoteproc/remoteproc2/coredump  enabled
+    write sys/class/remoteproc/remoteproc1/coredump  enabled
+    write sys/class/remoteproc/remoteproc0/coredump  enabled
+
     # Create the directories used by the Wireless subsystem
     mkdir /data/vendor/wifi 0770 wifi wifi
     mkdir /data/vendor/wifi/sockets 0770 wifi wifi
