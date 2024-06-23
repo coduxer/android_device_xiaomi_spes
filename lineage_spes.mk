@@ -33,7 +33,7 @@ endif
 #Special case when release type set to MICROG
 ifeq ($(RELEASE_TYPE), MICROG)
     #Microg
-    $(call inherit-product, vendor/partner_gms/products/gms.mk)
+    $(call inherit-product, vendor/microg/products/gms.mk)
 endif
 #Special case when release type set to VANILLA
 ifeq ($(RELEASE_TYPE), VANILLA)
