@@ -1,4 +1,4 @@
-# All unpinned blobs below are extracted from miui_SPESGlobal_V13.0.12.0.SGCMIXM_17a5e4852c_12.0
+# All unpinned blobs below are extracted from miui_SPESGlobal_V14.0.2.0.TGCMIXM_f4e2e7b209_13.0
 
 # ACDB
 vendor/etc/acdbdata/IDP/bengal-scubaidp-snd-card/IDP_Scuba_Bluetooth_cal.acdb
@@ -828,8 +828,8 @@ vendor/lib/hw/vulkan.adreno.so
 vendor/lib64/hw/vulkan.adreno.so
 
 # HotwordEnrollment
--product/priv-app/HotwordEnrollmentOKGoogleHEXAGON/HotwordEnrollmentOKGoogleHEXAGON.apk
--product/priv-app/HotwordEnrollmentXGoogleHEXAGON/HotwordEnrollmentXGoogleHEXAGON.apk
+-product/priv-app/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND/HotwordEnrollmentOKGoogleHEXAGON_WIDEBAND.apk
+-product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
 system_ext/etc/permissions/com.android.hotwordenrollment.common.util.xml
 system_ext/framework/com.android.hotwordenrollment.common.util.jar
 
@@ -1260,8 +1260,8 @@ vendor/radio/qcril_database/upgrade/13_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/14_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/15_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/16_version_update_ecc_table.sql
-vendor/radio/qcril_database/upgrade/17_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/18_version_update_ecc_table.sql
+vendor/radio/qcril_database/upgrade/19_version_update_ecc_table.sql
 vendor/radio/qcril_database/upgrade/1_version_intro.sql
 vendor/radio/qcril_database/upgrade/2_version_add_wps_config.sql
 vendor/radio/qcril_database/upgrade/3_version_update_wps_config.sql
@@ -1292,6 +1292,7 @@ vendor/lib64/libsnsapi.so
 vendor/lib64/libsnsdiaglog.so
 vendor/lib64/libssc.so
 vendor/lib64/libssc_default_listener.so
+vendor/lib64/sensors.touch.detect.so
 vendor/lib64/sensors.ssc.so
 
 # Sensors Calibrate
@@ -1382,39 +1383,36 @@ vendor/lib64/libscveObjectTracker.so
 vendor/lib64/libscveObjectTracker_stub.so
 
 # Soter
--vendor/app/SoterService/SoterService.apk
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so
 vendor/lib64/vendor.qti.hardware.soter@1.0.so
 
 # Thermal engine - from alioth_global-user 12 RKQ1.200826.002 V13.0.2.0.SKHMIXM release-keys
--vendor/lib/libthermalclient.so|6ed686c6c39546a7bf532767f6d87808a42b1176
--vendor/lib64/libthermalclient.so|7bcb4af9a6ae8d12bb0b2749c85e2ff1473678aa
-vendor/bin/mi_thermald|909c57ed861248423a62fc2d0385e99d955e9b0f
 vendor/etc/init/init.mi_thermald.rc|6505d89e19957888612d89f6769585a7d26af080
+
+# Thermal engine
+-vendor/lib/libthermalclient.so
+-vendor/lib64/libthermalclient.so
+vendor/bin/mi_thermald
 
 # Thermal configs (Global)
 vendor/etc/thermal-4k.conf
 vendor/etc/thermal-arvr.conf
 vendor/etc/thermal-camera.conf
+vendor/etc/thermal-class0.conf
 vendor/etc/thermal-chg-only.conf
 vendor/etc/thermal-engine.conf
 vendor/etc/thermal-map.conf
+vendor/etc/thermal-navigation.conf
 vendor/etc/thermal-nolimits.conf
 vendor/etc/thermal-normal.conf
 vendor/etc/thermal-phone.conf
 vendor/etc/thermal-tgame.conf
+vendor/etc/thermal-videochat.conf
+vendor/etc/thermal-video.conf
+vendor/etc/thermal-youtube.conf
 vendor/etc/thermald-devices.conf
-
-# Thermal configs (India) - from alioth_global-user 12 RKQ1.200826.002 V13.0.2.0.SKHMIXM release-keys
-vendor/etc/thermal-india-class0.conf|7cc57c1e625297c600c840a08e6e7d2d0af81817
-vendor/etc/thermal-india-mgame.conf|fda5b9fef4e24146ba430241eb100919f660c376
-vendor/etc/thermal-india-normal.conf|3ace701339810d147a2abf8cb8e77c1651c107c8
-vendor/etc/thermal-india-tgame.conf|085bf32b1cbe16516ee0adf4ac4f6e57ef4840a4
-vendor/etc/thermal-india-video.conf|bb15b873112319704323f219b382bd18b1996b56
-vendor/etc/thermal-map-india.conf|fdee294162e90ba8c7b60c8aac3d3f3ac84f2fef
-vendor/etc/thermal-region-map.conf|8a60e0d66e519e0301c3192a5c1740e21f2170bf
 
 # Time services
 -vendor/app/TimeService/TimeService.apk

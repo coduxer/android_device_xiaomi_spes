@@ -88,14 +88,19 @@ else
     echo 0 > /sys/module/process_reclaim/parameters/per_swap_size
     echo 7680 > /sys/module/process_reclaim/parameters/tsk_nomap_swap_sz
 
+    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
+    MemTotal=${MemTotalStr:16:8}
+
+    # Increase swappiness for low memory devices
+    if [ $MemTotal -le 4194304 ]; then
+        echo 180 > /proc/sys/vm/swappiness
+    fi
+
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
     echo 1 > /proc/sys/vm/watermark_scale_factor
 
     # Disable the feature of watermark boost
-    MemTotalStr=`cat /proc/meminfo | grep MemTotal`
-    MemTotal=${MemTotalStr:16:8}
-
     if [ $MemTotal -le 6291456 ]; then
         echo 0 > /proc/sys/vm/watermark_boost_factor
     fi
